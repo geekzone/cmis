@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="gmapkey" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<title></title>
+
+	<link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="all" />
+	
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
+	<script language="javascript">
+		$(function(){
+			$('form').jqTransform({imgPath:'jqtransformplugin/img/'});
+		});
+	</script>
+	<style type="text/css">
+		.rowElem {margin-top: 5px}
+	</style>
+	
+</head>
+<body>
+
+	<form action="post.php" method="POST">
+		<div class="rowElem">
+			<label style="margin-right:200px">当前矿山:</label>
+			<span>宝山矿</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:170px">采矿许可证号:</label>
+			<span>xxxxxxxxxx</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:59px">设计或开发利用方案编制单位:</label>
+			<input type="text" name="inputtext"/>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:59px">设计或开发利用方案批准单位:</label>
+			<input type="text" name="inputtext"/>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:107px">批准的可采矿层及编号:</label>
+			<input type="text" name="inputtext"/>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:155px">实际开采矿层数:</label>
+			<input type="text" name="inputtext"/>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:171px">核定生产能力:</label>
+			<input type="text" name="inputtext"/>
+			<span style="margin: 7px 0 0 6px; float:left">吨</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:171px">设计采矿方法:</label>
+			<input type="text" name="inputtext"/>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:155px">设计采区回采率:</label>
+			<input type="text" name="inputtext"/>
+			<span style="margin: 7px 0 0 6px; float:left">%</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:171px">实际采矿方法:</label>
+			<input type="text" name="inputtext"/>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:155px">核定采区回踩率:</label>
+			<input type="text" name="inputtext"/>
+			<span style="margin: 7px 0 0 6px; float:left">%</span>
+		</div>
+		<div class="rowElem" style="text-align:center">
+			<input type="button" value="确定上报" />
+			<input type="button" value="退出上报"/>
+		</div>
+	</form>
+
+</body>
+</html>

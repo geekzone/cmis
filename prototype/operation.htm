@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="gmapkey" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<title></title>
+
+	<link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="all" />
+	
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
+	<script language="javascript">
+		$(function(){
+			$('form').jqTransform({imgPath:'jqtransformplugin/img/'});
+		});
+	</script>
+	<style type="text/css">
+		.rowElem {margin-top: 5px}
+	</style>
+	
+</head>
+<body>
+
+	<form action="post.php" method="POST">
+		<div class="rowElem">
+			<label style="margin-right:200px">当前矿山:</label>
+			<span>宝山矿</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:200px">生产年度:</label>
+			<select name="select2" >
+				<option value="opt1">2014</option>
+				<option value="opt2">2013</option>
+				<option value="opt3">2012</option>
+			</select>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:200px">征收对象:</label>
+			<select name="select2" >
+				<option value="opt1">补偿征收对象</option>
+				<option value="opt2">普通征收对象</option>
+			</select>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:200px">生产周期:</label>
+			<select name="select2" >
+				<option value="opt1">一个季度</option>
+				<option value="opt2">一年</option>
+			</select>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:200px">周期时段:</label>
+			<select name="select2" >
+				<option value="opt1">2014-03-17</option>
+			</select>
+			<span style="float:left; margin: 5px 20px 0 20px">-</span>
+			<select name="select2" >
+				<option value="opt1">2014-04-17</option>
+			</select>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:232px">说明:</label>
+			<textarea cols="40" rows="12" name="mytext"></textarea>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:216px">销售量:</label>
+			<input type="text" name="inputtext"/>
+			<span style="margin: 7px 0 0 6px; float:left">吨</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:200px">销售收入:</label>
+			<input type="text" name="inputtext"/>
+			<span style="margin: 7px 0 0 6px; float:left">元</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:232px">单价:</label>
+			<input type="text" name="inputtext"/>
+			<span style="margin: 7px 0 0 6px; float:left">元/吨</span>
+		</div>
+		<div class="rowElem" style="text-align:center">
+			<input type="button" value="数据校验" />
+			<input type="button" value="数据上报"/>
+		</div>
+	</form>
+
+</body>
+</html>

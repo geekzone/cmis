@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="gmapkey" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<title></title>
+
+	<link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="all" />
+	
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
+	<script language="javascript">
+		$(function(){
+			$('form').jqTransform({imgPath:'jqtransformplugin/img/'});
+		});
+	</script>
+	<style type="text/css">
+		.rowElem {margin-top: 5px}
+	</style>
+	
+</head>
+<body>
+
+	<form action="post.php" method="POST">
+		<div class="rowElem" style="text-align:center">
+			<span style="font-size: x-large;">新疆伊吾县XX湖立昌工贸瓦用粘土矿</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:200px">年度审核:</label>
+			<select name="select2" >
+				<option value="opt1">2014</option>
+				<option value="opt2">2013</option>
+				<option value="opt3">2012</option>
+			</select>
+			<span style="margin: 7px 0 0 6px; float:left">年度</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:232px">说明:</label>
+			<textarea cols="40" rows="12" name="mytext"></textarea>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:200px">原矿库存:</label>
+			<input type="text" name="inputtext" value="0" />
+			<span style="margin: 7px 0 0 6px; float:left">立方米</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:216px">开采量:</label>
+			<input type="text" name="inputtext" value="0" />
+			<span style="margin: 7px 0 0 6px; float:left">立方米</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:216px">损失量:</label>
+			<input type="text" name="inputtext" value="0" />
+			<span style="margin: 7px 0 0 6px; float:left">立方米</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:216px">动用量:</label>
+			<input type="text" name="inputtext" value="0" />
+			<span style="margin: 7px 0 0 6px; float:left">立方米</span>
+		</div>
+		<div class="rowElem">
+			<label style="margin-right:216px">保有量:</label>
+			<input type="text" name="inputtext" value="0" />
+			<span style="margin: 7px 0 0 6px; float:left">立方米</span>
+		</div>
+		<div class="rowElem" style="text-align:center">
+			<input type="button" value="数据校验" />
+			<input type="button" value="数据上报"/>
+		</div>
+	</form>
+
+</body>
+</html>
