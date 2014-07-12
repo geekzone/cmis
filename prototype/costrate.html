@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Tree - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="js/jquery-easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery-easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery-easyui/demo.css">
+    <script type="text/javascript" src="js/jquery-easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-easyui/jquery.easyui.min.js"></script>
+    <link href="css/admin.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<form action="post.php" method="POST" style="float:left;padding: 10px 30px">
+    <div class="rowElem">
+        <label style="margin-right:30px">矿种代码:</label>
+        <span>焉者回族自治县国土资源局</span>
+        &nbsp;&nbsp;
+        <label style="margin-right:30px">矿种费率:</label>
+        <input type="text" name="inputtext"/>
+
+    </div>
+    <div class="rowElem">
+        <label style="margin-right:30px">矿种名称:</label>
+        <input type="text" name="inputtext"/>
+        &nbsp;&nbsp;
+        <label style="margin-right:30px">所属分类:</label>
+        <select name="select2" >
+            <option value="opt1">选择企业性质</option>
+        </select>
+    </div>
+    <div class="rowElem">
+        <label style="margin-right:30px">是否为主要矿产:</label>
+        <input type="radio" name="identity" value="" checked="checked" />设定为主要矿产
+    </div>
+    <div class="rowElem" style="text-align:center">
+        <input type="button" value="保存信息" />
+        <input type="button" value="采矿人信息修改"/>
+    </div>
+</form>
+
+<table class="easyui-datagrid" title="矿产信息列表" style="width:700px;height:250px"
+       data-options="singleSelect:true,collapsible:false,url:'datagrid_data1.json',method:'get'">
+    <thead>
+    <tr>
+        <th data-options="field:'itemid',width:80">序号</th>
+        <th data-options="field:'productid',width:100">矿产名称</th>
+        <th data-options="field:'listprice',width:80,align:'right'">矿产类别</th>
+        <th data-options="field:'unitcost',width:120,align:'right'">是否为主要矿产</th>
+        <th data-options="field:'attr1',width:250">矿产费率(%）</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>锡</td>
+        <td>有色金属矿产</td>
+        <td>主要矿产</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>钼</td>
+        <td>有色金属矿产</td>
+        <td>主要矿产</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>金</td>
+        <td>贵金属矿产</td>
+        <td>主要矿产</td>
+        <td>4</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

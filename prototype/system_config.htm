@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="gmapkey" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <title>征管参数设置</title>
+
+    <link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="all" />
+    <LINK href="css/admin.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js" ></script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
+    <script language="javascript">
+        $(function(){
+            $('form').jqTransform({imgPath:'jqtransformplugin/img/'});
+        });
+    </script>
+    <style type="text/css">
+        .rowElem {margin-top: 5px}
+    </style>
+
+</head>
+<body>
+
+<form action="post.php" method="POST" style="padding: 10px 30px">
+    <div class="rowElem">
+        <label style="margin-right:20px">系统补偿费征收方式:</label>
+        <select name="select2" >
+            <option value="opt1">按开采量计征</option>
+            <option value="opt2">按销售量计征</option>
+        </select>
+    </div>
+    <div class="rowElem">
+        <label style="margin-right:20px">是否启用实际会采率校验:</label>
+        <select name="select2" >
+            <option value="opt1">启用</option>
+            <option value="opt2">停用</option>
+        </select>
+    </div>
+    <div class="rowElem">
+        <label style="margin-right:20px">是否启用实际库存校验:</label>
+        <select name="select2" >
+            <option value="opt1">启用</option>
+            <option value="opt2">停用</option>
+        </select>
+    </div>
+    <div class="rowElem">
+        <label style="margin-right:20px">库存校验允许误差:</label>
+        <input type="text" name="inputtext"/>
+    </div>
+    <div class="rowElem">
+        <label style="margin-right:20px">是否启用开采量校验:</label>
+        <select name="select2" >
+            <option value="opt1">启用</option>
+            <option value="opt2">停用</option>
+        </select>
+    </div>
+    <div class="rowElem">
+        <label style="margin-right:20px">入库比例:</label>
+        <input type="text" name="inputtext"/>
+    </div>
+    <div class="rowElem">
+        <label style="margin-right:20px">缴费期限:</label>
+        <input type="text" name="inputtext"/>
+    </div>
+    <div class="rowElem">
+        <input type="button" value="保存" />
+    </div>
+</form>
+</body>
+</html>

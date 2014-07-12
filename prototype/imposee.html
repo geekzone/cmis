@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Tree - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="js/jquery-easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery-easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery-easyui/demo.css">
+    <script type="text/javascript" src="js/jquery-easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-easyui/jquery.easyui.min.js"></script>
+    <link href="css/admin.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
+    <script language="javascript">
+        $(function(){
+            $('form').jqTransform({imgPath:'jqtransformplugin/img/'});
+        });
+    </script>
+    <style type="text/css">
+        .rowElem {margin-top: 5px}
+    </style>
+</head>
+<body>
+<div style="float: left;margin-top:10px;">
+<table class="easyui-datagrid" title="矿物种类明细设定" style="width:500px;height:450px"
+       data-options="singleSelect:true,collapsible:false,url:'datagrid_data1.json',method:'get'">
+    <thead>
+    <tr>
+        <th data-options="field:'itemid',width:80">序号</th>
+        <th data-options="field:'productid',width:100">征收对象</th>
+        <th data-options="field:'listprice',width:80,align:'right'">所属矿种</th>
+        <th data-options="field:'unitcost',width:120,align:'right'">计量单位</th>
+        <th data-options="field:'attr1',width:250">稽查基准单价</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>薄煤层</td>
+        <td>煤炭</td>
+        <td>吨</td>
+        <td>115.3</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>中厚煤层</td>
+        <td>煤炭</td>
+        <td>吨</td>
+        <td>206.87</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>厚煤层</td>
+        <td>煤炭</td>
+        <td>吨</td>
+        <td>159.1</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>铁矿石</td>
+        <td>铁</td>
+        <td>吨</td>
+        <td>152.21</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<form action="post.php" method="POST" style="float: right;padding: 10px 30px">
+    <div class="rowElem">
+        <label style="margin:30px 30px 0">请选择矿种:</label><br>
+        <select name="select2" >
+            <option value="opt1">请选择需分类的矿种名称</option>
+        </select>
+    </div>
+    <div class="rowElem">
+        <label style="margin:30px 0px">请输入补偿费征收对象名称:</label><br>
+        <input type="text" name="inputtext"/>
+    </div>
+    <div class="rowElem">
+        <input type="checkbox" name="identity" value="" />上述新增对象是否远矿（打勾）
+    </div>
+    <div class="rowElem">
+        <label style="margin-right:200px">请选择征收对象计量单位:</label><br>
+        <select name="select2" >
+            <option value="opt1">请选择矿物默认计量单位</option>
+        </select>
+    </div>
+    <div class="rowElem">
+        <label style="margin-right:200px">征收对象区内基准单价（稽查用）:</label><br>
+        <input type="text" name="inputtext"/>
+        <span style="margin: 7px 0 0 6px; float:right">元/吨</span>
+    </div>
+    <div class="rowElem" style="text-align:center">
+        <input type="button" value="保存信息" />
+    </div>
+</form>
+</body>
+</html>
