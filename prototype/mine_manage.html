@@ -12,7 +12,7 @@
 </head>
 <body>
 <div style="margin-top:10px;float: left">
-    <div class="easyui-panel" style="padding:5px;width: 300px;height: 200px">请选择需要调整归属权的采矿权人
+    <div class="easyui-panel" style="padding:5px;width: 300px">单位列表
         <ul class="easyui-tree">
             <li>
                 <span>巴音郭楞蒙古自治州国土资源局</span>
@@ -34,8 +34,11 @@
             </li>
         </ul>
     </div>
-    <input type="text" style="margin-top:5px;padding: 5px;width: 250px"/>
-    <div class="easyui-panel" style="margin:10px 0px;padding:5px;width: 300px;height: 200px">采矿权人列表
+    <div class="rowElem">
+        <label style="margin-right:30px">查询:</label>
+        <input type="text" name="inputtext"/>
+    </div>
+    <div class="easyui-panel" style="margin-top:10px;padding:5px;width: 300px">采矿权授权人列表
         <ul class="easyui-tree">
             <li>
                 <span>焉者回族自治县国土资源局</span>
@@ -57,30 +60,11 @@
         </ul>
     </div>
 </div>
-<div class="easyui-panel" style="margin-left:10px;margin-top:10px;padding:5px;width: 300px;height: 400px">采矿权人列表
-    <ul class="easyui-tree">
-        <li>
-            <span>巴音郭楞蒙古自治州国土资源局</span>
-            <ul>
-                <li>
-                    <span>库尔勒国土资源局</span>
-                </li>
-                <li>
-                    <span>轮台县国土资源局</span>
-                </li>
-                <li><span>尉犁县国土资源局</span></li>
-                <li><span>和静县国土资源局</span></li>
-                <li><span>且末县国土资源局</span></li>
-                <li><span>若羌县国土资源局</span></li>
-                <li><span>焉者回族自治县国土资源局</span></li>
-                <li><span>和硕县国土资源局</span></li>
-                <li><span>博湖县国土资源局</span></li>
-            </ul>
-        </li>
-    </ul>
-
-</div>
-<input type="button" value="调整归属" />
-</div>
+<table style="border: 1px solid">
+    <tr>
+    <td>矿山名称</td>
+     <td><input type="text"></td>
+    </tr>
+</table>
 </body>
 </html>

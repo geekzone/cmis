@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CMIS-矿补费系统</title>
+	<link rel="stylesheet" type="text/css" href="../js/jquery-easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../js/jquery-easyui/themes/icon.css">
+	<script type="text/javascript" src="../js/jquery-easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-easyui/jquery.easyui.min.js"></script>
+</head>
+<body class="easyui-layout">
+	<div data-options="region:'north',border:false" style="height:60px;background:#E0ECFF;padding:10px">CMIS-矿补费系统</div>
+	<div data-options="region:'west',split:true,title:'功能菜单'" style="width:150px;padding:10px;">
+        <ul id="menu" class="easyui-tree"   />
+	</div>
+	<div id="content" data-options="region:'center',title:'Center'"></div>
+<script>
+    $(document).ready(function(){
+        if(location.hash == '#shenhe'){
+            $('#menu').tree({
+                url:'../js/data/menu.json'
+            });
+        }else{
+            $('#menu').tree({
+                url:'../js/data/menu_tijiao.json'
+            });
+        }
+    })
+    $('#menu').tree({
+        onClick: function(node){
+            var loadHref = "";
+            if(node.id == 11){
+                loadHref = "../changepassword.htm"
+            }
+            if(node.id == 12){
+                loadHref = "../changepassword.htm"
+            }
+            if(node.id == 51){
+                loadHref = "../changepassword.htm"
+            }
+            if(node.id == 13){
+                loadHref = "../mineer.html"
+            }
+            if(node.id == 14){
+                loadHref = "../costrate.html"
+            }
+            if(node.id == 15){
+                loadHref = "../imposee.html"
+            }
+            if(node.id == 16){
+                loadHref = "../system_config.htm"
+            }
+            if(node.id == 17){
+                loadHref = "../mineer_relation.html"
+            }
+            if(node.id == 31){
+                loadHref = "../operation.html"
+            }
+            if(node.id == 32){
+                loadHref = "../recoveryRate.htm"
+            }
+            if(node.id == 33){
+                loadHref = "../annualAudit.htm"
+            }
+            if(node.id == 41){
+                loadHref = "../infomation.htm"
+            }
+            if(node.id == 42){
+                loadHref = "../jingying.html"
+            }
+            if(node.id == 43){
+                loadHref = "../jiaofei.html"
+            }
+            $('#content').panel({
+                href:loadHref,
+                title:node.text
+            });
+        }
+    });
+
+</script>
+</body>
+</html>
