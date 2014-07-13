@@ -11,75 +11,74 @@
 
 	<title></title>
 
-	<link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="all" />
-    <LINK href="css/admin.css" type="text/css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery.js" ></script>
-	<script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
-	<script language="javascript">
-		$(function(){
-			$('form').jqTransform({imgPath:'jqtransformplugin/img/'});
-		});
-	</script>
-	<style type="text/css">
-		.rowElem {margin-top: 5px}
-	</style>
+    <link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+    <script type="text/javascript" src="../../jquery.min.js"></script>
+    <script type="text/javascript" src="../../jquery.easyui.min.js"></script>
 	
 </head>
 <body>
-
-<form action="post.php" method="POST" style="padding: 10px 30px">
-		<div class="rowElem">
-			<label style="margin-right:200px">当前矿山:</label>
-			<span>宝山矿</span>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:170px">采矿许可证号:</label>
-			<span>xxxxxxxxxx</span>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:59px">设计或开发利用方案编制单位:</label>
-			<input type="text" name="inputtext"/>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:59px">设计或开发利用方案批准单位:</label>
-			<input type="text" name="inputtext"/>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:107px">批准的可采矿层及编号:</label>
-			<input type="text" name="inputtext"/>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:155px">实际开采矿层数:</label>
-			<input type="text" name="inputtext"/>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:171px">核定生产能力:</label>
-			<input type="text" name="inputtext"/>
-			<span style="margin: 7px 0 0 6px; float:left">吨</span>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:171px">设计采矿方法:</label>
-			<input type="text" name="inputtext"/>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:155px">设计采区回采率:</label>
-			<input type="text" name="inputtext"/>
-			<span style="margin: 7px 0 0 6px; float:left">%</span>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:171px">实际采矿方法:</label>
-			<input type="text" name="inputtext"/>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:155px">核定采区回踩率:</label>
-			<input type="text" name="inputtext"/>
-			<span style="margin: 7px 0 0 6px; float:left">%</span>
-		</div>
-		<div class="rowElem" style="text-align:center">
-			<input type="button" value="确定上报" />
-			<input type="button" value="退出上报"/>
-		</div>
-	</form>
-
+<div style="padding:10px 30px 20px 30px">
+    <form id="ff" method="post">
+        <table cellpadding="5">
+            <tr>
+                <td>当前矿山:</td>
+                <td>宝山矿</td>
+            </tr>
+            <tr>
+                <td>采矿许可证号：</td>
+                <td>xxxxxxx</td>
+            </tr>
+            <tr>
+                <td>设计或开发利用方案编制单位:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>设计或开发利用方案批准单位:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+                </td>
+            </tr>
+            <tr>
+                <td>批准的可采矿层及编号:</td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="newpwd"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>实际开采矿层数:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>核定生产能力:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input><span style="margin: 7px 0 0 6px;">吨</span></td>
+            </tr>
+            <tr>
+                <td>设计采矿方法:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>设计采区回采率:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input><span style="margin: 7px 0 0 6px;">%</span></td>
+            </tr>
+            <tr>
+                <td>实际采矿方法:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>核定采区回采率:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input><span style="margin: 7px 0 0 6px;">%</span></td>
+            </tr>
+        </table>
+    </form>
+    <div style="text-align:left;padding:5px">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">确定上报</a>
+    </div>
+</div>
+<script>
+    function submitForm(){
+        alert("上报成功！");
+        $('#ff').form('submit');
+    }
+</script>
 </body>
 </html>

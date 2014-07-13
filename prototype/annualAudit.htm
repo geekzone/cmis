@@ -9,71 +9,75 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 
-	<title></title>
-
-	<link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="all" />
-    <LINK href="css/admin.css" type="text/css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery.js" ></script>
-	<script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
-	<script language="javascript">
-		$(function(){
-			$('form').jqTransform({imgPath:'jqtransformplugin/img/'});
-		});
-	</script>
-	<style type="text/css">
-		.rowElem {margin-top: 5px}
-	</style>
+	<title>非煤矿山年度核查情况上报</title>
+    <link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+    <script type="text/javascript" src="../../jquery.min.js"></script>
+    <script type="text/javascript" src="../../jquery.easyui.min.js"></script>
 	
 </head>
 <body>
-
-<form action="post.php" method="POST" style="padding: 10px 30px">
-		<div class="rowElem" style="text-align:center">
-			<span style="font-size: x-large;">新疆伊吾县XX湖立昌工贸瓦用粘土矿</span>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:200px">年度审核:</label>
-			<select name="select2" >
-				<option value="opt1">2014</option>
-				<option value="opt2">2013</option>
-				<option value="opt3">2012</option>
-			</select>
-			<span style="margin: 7px 0 0 6px; float:left">年度</span>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:232px">说明:</label>
-			<textarea cols="40" rows="12" name="mytext"></textarea>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:200px">原矿库存:</label>
-			<input type="text" name="inputtext" value="0" />
-			<span style="margin: 7px 0 0 6px; float:left">立方米</span>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:216px">开采量:</label>
-			<input type="text" name="inputtext" value="0" />
-			<span style="margin: 7px 0 0 6px; float:left">立方米</span>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:216px">损失量:</label>
-			<input type="text" name="inputtext" value="0" />
-			<span style="margin: 7px 0 0 6px; float:left">立方米</span>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:216px">动用量:</label>
-			<input type="text" name="inputtext" value="0" />
-			<span style="margin: 7px 0 0 6px; float:left">立方米</span>
-		</div>
-		<div class="rowElem">
-			<label style="margin-right:216px">保有量:</label>
-			<input type="text" name="inputtext" value="0" />
-			<span style="margin: 7px 0 0 6px; float:left">立方米</span>
-		</div>
-		<div class="rowElem" style="text-align:center">
-			<input type="button" value="数据校验" />
-			<input type="button" value="数据上报"/>
-		</div>
-	</form>
-
+<div style="padding:10px 30px 20px 30px">
+    <form id="ff" method="post">
+        <table cellpadding="5">
+            <tr>
+                <th colspan="2" >新疆伊吾县XX湖立昌工贸瓦用粘土矿</th>
+            </tr>
+            <tr>
+                <td>年度审核：</td>
+                <td><select class="easyui-combobox" name="year">
+                    <option value="opt1">2014</option>
+                    <option value="opt2">2013</option>
+                    <option value="opt3">2012</option>
+                </select>
+                <span style="margin: 7px 0 0 6px;">年度</span>
+                </td>
+            </tr>
+            <tr>
+                <td>说明:</td>
+                <td><textarea class="easyui-validatebox" type="text" name="newpwd"></textarea></td>
+            </tr>
+            <tr>
+                <td>原矿库存:</td>
+                <td><input type="text" name="inputtext" value="0" />
+                    <span style="margin: 7px 0 0 6px;">立方米</span></td>
+            </tr>
+            <tr>
+                <td>开采量:</td>
+                <td><input type="text" name="inputtext" value="0" />
+                    <span style="margin: 7px 0 0 6px;">立方米</span></td>
+            </tr>
+            <tr>
+                <td>损失量:</td>
+                <td><input type="text" name="inputtext" value="0" />
+                    <span style="margin: 7px 0 0 6px;">立方米</span></td>
+            </tr>
+            <tr>
+                <td>动用量:</td>
+                <td><input type="text" name="inputtext" value="0" />
+                    <span style="margin: 7px 0 0 6px;">立方米</span></td>
+            </tr>
+            <tr>
+                <td>保有量:</td>
+                <td><input type="text" name="inputtext" value="0" />
+                    <span style="margin: 7px 0 0 6px;">立方米</span></td>
+            </tr>
+        </table>
+    </form>
+    <div style="text-align:left;padding:5px">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="checkForm()">数据校验</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">数据上报</a>
+    </div>
+</div>
+<script>
+    function checkForm(){
+        alert("数据校验正确！");
+        $('#ff').form('submit');
+    }
+    function submitForm(){
+        alert("已上报！");
+        $('#ff').form('submit');
+    }
+</script>
 </body>
 </html>
