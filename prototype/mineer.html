@@ -2,13 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Basic Tree - jQuery EasyUI Demo</title>
-    <link rel="stylesheet" type="text/css" href="js/jquery-easyui/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="js/jquery-easyui/themes/icon.css">
-    <script type="text/javascript" src="js/jquery-easyui/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-easyui/jquery.easyui.min.js"></script>
-    <link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="all" />
-    <link href="css/admin.css" type="text/css" rel="stylesheet">
+    <title>采矿权人管理</title>
+    <link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+    <script type="text/javascript" src="../../jquery.min.js"></script>
+    <script type="text/javascript" src="../../jquery.easyui.min.js"></script>
 </head>
 <body>
 <div style="margin-top:10px;float: left">
@@ -56,45 +54,62 @@
     </ul>
 </div>
 </div>
-<form action="post.php" method="POST" style="float:left;padding: 10px 30px">
-    <div class="rowElem">
-        <label style="margin-right:30px">当前位置:</label>
-        <span>焉者回族自治县国土资源局</span>
+<div style="padding:10px 30px 20px 30px;float: left;">
+    <form id="ff" method="post">
+        <table cellpadding="5">
+            <tr>
+                <td>当前位置:</td>
+                <td>焉者回族自治县国土资源局</td>
+            </tr>
+            <tr>
+                <td>采矿人代码：</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>采矿人名称：</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>经济类型:</td>
+                <td><select name="select2"  class="easyui-combobox">
+                    <option value="opt1">选择企业性质</option>
+                    <option value="opt1">公有</option>
+                    <option value="opt1">私有</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td>负责人：</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>联系电话：</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>联系地址：</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>信息备注:</td>
+                <td><textarea class="easyui-validatebox" type="text" name="newpwd"></textarea></td>
+            </tr>
+        </table>
+    </form>
+    <div style="text-align:left;padding:5px">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="checkForm()">保存信息</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">采矿人信息修改</a>
     </div>
-    <div class="rowElem">
-        <label style="margin-right:30px">采矿人代码:</label>
-        <input type="text" name="inputtext"/>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:30px">采矿人名称:</label>
-        <input type="text" name="inputtext"/>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:30px">经济类型:</label>
-        <select name="select2" >
-            <option value="opt1">选择企业性质</option>
-        </select>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:30px">负责人:</label>
-        <input type="text" name="inputtext"/>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:30px">联系电话:</label>
-        <input type="text" name="inputtext"/>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:30px">联系地址:</label>
-        <input type="text" name="inputtext"/>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:30px">信息备注:</label>
-        <textarea cols="40" rows="12" name="mytext"></textarea>
-    </div>
-    <div class="rowElem" style="text-align:center">
-        <input type="button" value="保存信息" />
-        <input type="button" value="采矿人信息修改"/>
-    </div>
-</form>
+</div>
+<script>
+    function checkForm(){
+        alert("保存成功！");
+        $('#ff').form('submit');
+    }
+    function submitForm(){
+        alert("修改成功！");
+        $('#ff').form('submit');
+    }
+</script>
 </body>
 </html>

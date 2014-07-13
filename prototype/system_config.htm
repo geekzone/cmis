@@ -10,67 +10,67 @@
     <meta name="keywords" content="" />
 
     <title>征管参数设置</title>
-
-    <link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="all" />
-    <LINK href="css/admin.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="js/jquery.js" ></script>
-    <script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
-    <script language="javascript">
-        $(function(){
-            $('form').jqTransform({imgPath:'jqtransformplugin/img/'});
-        });
-    </script>
-    <style type="text/css">
-        .rowElem {margin-top: 5px}
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+    <script type="text/javascript" src="../../jquery.min.js"></script>
+    <script type="text/javascript" src="../../jquery.easyui.min.js"></script>
 </head>
 <body>
-
-<form action="post.php" method="POST" style="padding: 10px 30px">
-    <div class="rowElem">
-        <label style="margin-right:20px">系统补偿费征收方式:</label>
-        <select name="select2" >
-            <option value="opt1">按开采量计征</option>
-            <option value="opt2">按销售量计征</option>
-        </select>
+<div style="padding:10px 30px 20px 30px">
+    <form id="ff" method="post">
+        <table cellpadding="5">
+            <tr>
+                <td>系统补偿费征收方式:</td>
+                <td><select name="select2"  class="easyui-combobox" >
+                    <option value="opt1">按开采量计征</option>
+                    <option value="opt2">按销售量计征</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>是否启用实际会采率校验：</td>
+                <td><select class="easyui-combobox" name="year">
+                    <option value="opt1">启用</option>
+                    <option value="opt2">停用</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>是否启用实际库存校验：</td>
+                <td><select class="easyui-combobox" name="year">
+                    <option value="opt1">启用</option>
+                    <option value="opt2">停用</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>库存校验允许误差:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>是否启用开采量校验：</td>
+                <td><select class="easyui-combobox" name="year">
+                    <option value="opt1">启用</option>
+                    <option value="opt2">停用</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>入库比例:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>缴费期限:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+        </table>
+    </form>
+    <div style="text-align:left;padding:5px">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="checkForm()">保存</a>
     </div>
-    <div class="rowElem">
-        <label style="margin-right:20px">是否启用实际会采率校验:</label>
-        <select name="select2" >
-            <option value="opt1">启用</option>
-            <option value="opt2">停用</option>
-        </select>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:20px">是否启用实际库存校验:</label>
-        <select name="select2" >
-            <option value="opt1">启用</option>
-            <option value="opt2">停用</option>
-        </select>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:20px">库存校验允许误差:</label>
-        <input type="text" name="inputtext"/>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:20px">是否启用开采量校验:</label>
-        <select name="select2" >
-            <option value="opt1">启用</option>
-            <option value="opt2">停用</option>
-        </select>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:20px">入库比例:</label>
-        <input type="text" name="inputtext"/>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:20px">缴费期限:</label>
-        <input type="text" name="inputtext"/>
-    </div>
-    <div class="rowElem">
-        <input type="button" value="保存" />
-    </div>
-</form>
+</div>
+<script>
+    function checkForm(){
+        alert("保存成功！");
+        $('#ff').form('submit');
+    }
+</script>
+</body>
 </body>
 </html>

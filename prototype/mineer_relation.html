@@ -2,13 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Basic Tree - jQuery EasyUI Demo</title>
-    <link rel="stylesheet" type="text/css" href="js/jquery-easyui/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="js/jquery-easyui/themes/icon.css">
-    <script type="text/javascript" src="js/jquery-easyui/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-easyui/jquery.easyui.min.js"></script>
-    <link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="all" />
-    <link href="css/admin.css" type="text/css" rel="stylesheet">
+    <title>采矿权人归属调整</title>
+    <link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+    <script type="text/javascript" src="../../jquery.min.js"></script>
+    <script type="text/javascript" src="../../jquery.easyui.min.js"></script>
 </head>
 <body>
 <div style="margin-top:10px;float: left">
@@ -80,7 +78,15 @@
     </ul>
 
 </div>
-<input type="button" value="调整归属" />
+<div style="text-align:left;padding:15px">
+<a href="javascript:void(0)" class="easyui-linkbutton" onclick="checkForm()">调整归属</a>
 </div>
+</div>
+<script>
+    function checkForm(){
+        alert("调整完成！");
+        $('#ff').form('submit');
+    }
+</script>
 </body>
 </html>

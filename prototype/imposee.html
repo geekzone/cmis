@@ -22,7 +22,7 @@
 <body>
 <div style="float: left;margin-top:10px;">
 <table class="easyui-datagrid" title="矿物种类明细设定" style="width:500px;height:450px"
-       data-options="singleSelect:true,collapsible:false,url:'datagrid_data1.json',method:'get'">
+       data-options="singleSelect:true,collapsible:false">
     <thead>
     <tr>
         <th data-options="field:'itemid',width:80">序号</th>
@@ -64,34 +64,67 @@
     </tbody>
 </table>
 </div>
-<form action="post.php" method="POST" style="float: right;padding: 10px 30px">
-    <div class="rowElem">
-        <label style="margin:30px 30px 0">请选择矿种:</label><br>
-        <select name="select2" >
-            <option value="opt1">请选择需分类的矿种名称</option>
-        </select>
+<div style="padding:10px 30px 20px 30px;float:left">
+    <form id="ff" method="post">
+        <table cellpadding="5">
+            <tr>
+                <td>请选择矿种:</td>
+                <td><select class="easyui-combobox" name="year">
+                    <option value="opt1">请选择需分类的矿种名称</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>请输入补偿费征收对象名称：</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="checkbox" name="identity" value="" />上述新增对象是否远矿（打勾）</td>
+            </tr>
+            <tr>
+                <td>请选择征收对象计量单位:</td>
+                <td><select name="select2"  class="easyui-combobox">
+                    <option value="opt1">请选择矿物默认计量单位</option>
+                    <option value="opt2">吨</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>征收对象区内基准单价（稽查用）:</td>
+                <td>
+                    <input type="text" name="inputtext"/>
+                    <span style="margin: 7px 0 0 6px;">元/吨</span>
+                </td>
+            </tr>
+            <tr>
+                <td>说明:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input></td>
+            </tr>
+            <tr>
+                <td>销售量:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input><span style="margin: 7px 0 0 6px;">吨</span></td>
+            </tr>
+            <tr>
+                <td>销售收入:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input><span style="margin: 7px 0 0 6px;">元</span></td>
+            </tr>
+            <tr>
+                <td>单价:</td>
+                <td><input class="easyui-validatebox" type="text" name="newpwd"></input><span style="margin: 7px 0 0 6px;">元/吨</span></td>
+            </tr>
+        </table>
+    </form>
+    <div style="text-align:left;padding:5px">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="checkForm()">保存信息</a>
     </div>
-    <div class="rowElem">
-        <label style="margin:30px 0px">请输入补偿费征收对象名称:</label><br>
-        <input type="text" name="inputtext"/>
-    </div>
-    <div class="rowElem">
-        <input type="checkbox" name="identity" value="" />上述新增对象是否远矿（打勾）
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:200px">请选择征收对象计量单位:</label><br>
-        <select name="select2" >
-            <option value="opt1">请选择矿物默认计量单位</option>
-        </select>
-    </div>
-    <div class="rowElem">
-        <label style="margin-right:200px">征收对象区内基准单价（稽查用）:</label><br>
-        <input type="text" name="inputtext"/>
-        <span style="margin: 7px 0 0 6px; float:right">元/吨</span>
-    </div>
-    <div class="rowElem" style="text-align:center">
-        <input type="button" value="保存信息" />
-    </div>
-</form>
+</div>
+<script>
+    function checkForm(){
+        alert("数据校验正确！");
+        $('#ff').form('submit');
+    }
+    function submitForm(){
+        alert("已上报！");
+        $('#ff').form('submit');
+    }
+</script>
 </body>
 </html>
